@@ -43,8 +43,6 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path='/team' element={<Team />} />
-            <Route path='/services' element={<Services/>}/>
             <Route path='/about' element={<AboutUsPage/>}/>
             <Route path='/manifesto' element={<Manifesto/>}/>
             

@@ -22,10 +22,6 @@ export function ServiceLayout({ title, description, children }: ServiceLayoutPro
               <Link to="/" className="text-gray-500 hover:text-primary">Home</Link>
             </li>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <li>
-              <Link to="/services" className="text-gray-500 hover:text-primary">Services</Link>
-            </li>
-            <ChevronRight className="h-4 w-4 text-gray-400" />
             <li className="text-primary font-medium">{title}</li>
           </ol>
         </div>
