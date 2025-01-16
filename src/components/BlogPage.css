@@ -1,3 +1,5 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap");
 /* General Styles */
 body {
   font-family: "Roboto", sans-serif;
@@ -6,133 +8,186 @@ body {
   background-color: #f7f7f7;
 }
 
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif; /* Navbar uses Montserrat */
+}
+
+/* Blog Page */
 .blog-page {
-  padding: 40px 20px;
+  padding: 80px 15px 40px; /* Added top padding to avoid navbar overlap */
   background-color: #f7f7f7;
 }
 
 .blog-header {
   text-align: center;
-  background-color: var(--bg-primary); /* Primary color applied */
-  color: white;
-  padding: 60px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px 10px; /* Reduced padding for compact layout */
 }
 
 .blog-header h1 {
-  font-size: 3rem;
-  margin: 0;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif; /* Use Montserrat for headers */
+  font-size: 2rem; /* Reduced font size */
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .blog-header p {
-  font-size: 1.2rem;
-  margin-top: 12px;
+  font-family: "Roboto", sans-serif; /* Use Roboto for subtext */
+  font-size: 1rem; /* Smaller font size */
+  color: #555;
 }
 
+.see-all-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.see-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Blog List Container */
 .blog-list-container {
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 900px; /* Adjusted width for compact layout */
+  margin: 0 auto; /* Center the container */
+  padding: 15px; /* Adjusted padding for a balanced look */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Blog List */
 .blog-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Compact grid */
+  gap: 15px; /* Adjusted spacing between cards */
 }
 
+/* Blog Card */
 .blog-card {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 10px; /* Slightly reduced radius */
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px;
 }
 
 .blog-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Blog Image */
 .blog-image {
   width: 100%;
-  height: 250px;
+  height: 180px; /* Adjusted height */
   object-fit: cover;
   border-bottom: 2px solid #f0f0f0;
 }
 
 .blog-image-placeholder {
   background-color: #ececec;
-  height: 250px;
+  height: 180px; /* Match placeholder height */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
   font-style: italic;
   text-align: center;
 }
 
+/* Blog Content */
 .blog-content {
-  padding: 20px;
+  padding: 15px;
 }
 
 .blog-title {
-  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif; /* Use Montserrat for titles */
+  font-size: 1.2rem; /* Adjusted font size */
   font-weight: 700;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .blog-excerpt {
-  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif; /* Use Roboto for body text */
+  font-size: 0.9rem; /* Smaller font size */
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
+/* Read More Button */
 .read-more-btn {
+  font-family: "Roboto", sans-serif;
   display: inline-block;
-  padding: 12px 24px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: var(--bg-primary); /* Primary color applied */
+  padding: 8px 16px; /* Adjusted button size */
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #ffffff;
+  background-color: #00a879;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 25px;
   text-align: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .read-more-btn:hover {
-  background-color: #0056b3; /* Hover effect */
+  background-color: #008d67;
   transform: translateY(-3px);
 }
 
+/* Loading and Error States */
 .loading,
 .error {
   text-align: center;
-  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
   color: #333;
-  margin-top: 50px;
+  margin-top: 30px; /* Adjusted margin */
   font-weight: 600;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .blog-header h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Smaller header font size */
   }
 
   .blog-header p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjusted subtext font size */
+  }
+
+  .see-all-link {
+    font-size: 0.8rem;
+  }
+
+  .blog-list-container {
+    padding: 10px; /* Reduced padding for smaller screens */
   }
 
   .blog-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column on smaller devices */
   }
-}
-:root {
-  --bg-primary: #00a879;
+
+  .blog-image {
+    height: 150px; /* Smaller image height on mobile */
+  }
+
+  .read-more-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px; /* Adjusted button size */
+  }
 }

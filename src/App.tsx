@@ -21,6 +21,7 @@ import { AboutUsPage } from './components/pages/AboutUs/AboutUsPage';
 function HomePage() {
   return (
     <>
+      <AboutUsPage/>
       <Hero />
       <Services />
       <About/>
