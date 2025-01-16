@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { useContactForm } from './useContactForm';
 import { ContactForm } from './ContactForm';
-// import { NewsletterForm } from './NewsletterForm';
+import { NewsletterForm } from './NewsletterForm';
 
 export function Contact() {
   return (
@@ -21,11 +21,9 @@ export function Contact() {
           <ContactForm />
         </div>
 
-        {/* Newsletter section temporarily hidden
         <div className="mt-20">
           <NewsletterForm />
         </div>
-        */}
       </div>
     </section>
   );
