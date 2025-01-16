@@ -29,10 +29,12 @@ const BlogPage: React.FC = () => {
   if (error) return <p className="error">{error}</p>;
 
   return (
-    <div className="blog-page">
+    <div className="blog-page" id="blog">
       <header className="blog-header">
-        <h1>Explore Our Blog</h1>
-        <p>Stay updated with the latest insights and articles.</p>
+        <h1>Latest News</h1>
+        <a href="/all-blogs" className="see-all-link">
+          See All →
+        </a>
       </header>
       <div className="blog-list-container">
         <ul className="blog-list">
